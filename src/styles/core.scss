@@ -1,0 +1,39 @@
+@import 'base';
+@import '~normalize.css/normalize';
+
+// Some best-practice CSS that's useful for most apps
+// Just remove them if they're not what you want
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-width: 1500px;
+
+}
+
+body {
+  background-color: #262a34;
+  font-family: 'Anton', sans-serif;
+  font-size: 14px;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    font-size: 70%;
+  }
+}

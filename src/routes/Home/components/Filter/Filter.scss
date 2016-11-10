@@ -1,0 +1,45 @@
+@keyframes hang {
+	50% {
+		transform: translateY(3px);
+	}
+
+	100% {
+		transform: translateY(6px);
+	}
+}
+
+
+.filter__buttons {
+
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 80%;
+  min-width: 200px;
+  margin: 40px auto;
+  flex-flow: row wrap;
+
+  button {
+    display: inline;
+    outline: 0;
+    border: 2px solid #fff;
+    background-color: #fff;
+    padding: 20px 25px;
+    font-size: 1em;
+    letter-spacing: .1em;
+    margin: 10px;
+    transition-duration: .5s;
+	  transition-property: transform;
+
+
+    &:hover {
+      transform: translateY(6px);
+		  animation: hang 1.5s linear infinite alternate;
+
+
+    }
+
+
+
+  }
+}
