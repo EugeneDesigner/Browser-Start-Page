@@ -13,7 +13,6 @@ class HomeView extends Component {
 
   render() {
     const { page } = this.props
-    console.log(page.category)
     const { getIcons, uploadIcons } = this.props.actions
 
       return (

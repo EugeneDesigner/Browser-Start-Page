@@ -33,10 +33,20 @@
     letter-spacing: .1em;
     text-decoration: none;
     transition: all .1s;
+    font-size: 1.3em;
 
     &:hover {
       color: #fff;
     }
 
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .menu {
+    a {
+      padding: 10px;
+    }
   }
 }

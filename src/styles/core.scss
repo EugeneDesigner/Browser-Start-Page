@@ -3,16 +3,13 @@
 
 // Some best-practice CSS that's useful for most apps
 // Just remove them if they're not what you want
-html {
-  box-sizing: border-box;
-}
 
 html,
 body {
-  margin: 0;
   padding: 0;
   height: 100%;
-  max-width: 1500px;
+  box-sizing: border-box;
+
 
 }
 
@@ -20,6 +17,8 @@ body {
   background-color: #262a34;
   font-family: 'Anton', sans-serif;
   font-size: 14px;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 h3 {
@@ -34,6 +33,6 @@ h3 {
 
 @media screen and (max-width: 960px) {
   body {
-    font-size: 70%;
+    font-size: 80%;
   }
 }

@@ -11,7 +11,7 @@ export const Header = () => (
       </IndexLink>
     </div>
     <div>
-      <Link to='/counter' activeClassName='route--active'>
+      <Link to='/contact' activeClassName='route--active'>
         Who is behind all this?
       </Link>
     </div>

@@ -23,13 +23,16 @@
     display: inline;
     outline: 0;
     border: 2px solid #fff;
-    background-color: #fff;
+    background-color: rgba(255,255,255, .95);
     padding: 20px 25px;
-    font-size: 1em;
+    font-size: .9em;
     letter-spacing: .1em;
     margin: 10px;
     transition-duration: .5s;
 	  transition-property: transform;
+		text-transform: uppercase;
+		color: #262a34;
+		font-weight: 600;
 
 
     &:hover {

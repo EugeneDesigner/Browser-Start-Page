@@ -72,3 +72,14 @@ $colorList:
      }
    }
 }
+
+
+@media screen and (max-width: 960px) {
+  .icons__set {
+    .color-man {
+      p {
+        opacity: 1;
+      }
+    }
+  }
+}

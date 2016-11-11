@@ -2,7 +2,7 @@ import * as actionTypes from '../constants/actionTypes';
 
 const initialState = {
 
-  category: 'how are you',
+  category: '',
   icons: []
 }
 

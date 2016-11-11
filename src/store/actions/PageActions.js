@@ -34,7 +34,6 @@ export function uploadIcons(category) {
 
 
 export function getIcons(category) {
-  console.log(category)
   return ({
       type: actionTypes.ICONS_REQUEST,
       payload: category
