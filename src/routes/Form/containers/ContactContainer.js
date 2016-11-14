@@ -17,9 +17,14 @@ class Contact extends Component {
     this.fixPosition = this.fixPosition.bind(this);
   }
 
-  componentDidMount() {
+  componentDidUpdate() {
 
+    if (ReactDOM.findDOMNode(this.refs.lastmessage)) {
+      document.getElementsByClassName('contact__form')[0].style.display = 'none'
+    }
   }
+
+
 
   fixPosition(e) {
     if (this.state.underscore) {
@@ -49,7 +54,9 @@ class Contact extends Component {
 
 
   render() {
-    const { contact, sendMessage } = this.props
+    const { contact, sendMessage, form } = this.props
+    console.log(contact)
+
 
     return (
 
@@ -65,6 +72,11 @@ class Contact extends Component {
           <a href="http://eugenedeveloper.me" ref="website" className="logo"></a>
           <Form ref="form" sendMessage={sendMessage}/>
         </div>
+
+        {
+        form.contact && form.contact.submitSucceeded
+          ? <div className="success" ref="lastmessage"> Thank you for your message, {contact.person[contact.person.length-1].name}. I'll get back to you as soon as I can </div>
+          : null}
       </section>
 
     )
@@ -73,10 +85,16 @@ class Contact extends Component {
 
 
 
+function mapStateToProps (state)  {
+  return {
+    form: state.form,
+    contact: state.contact
+
+  }
+}
+
 const mapDispatchToProps = (dispatch) =>  ({
     sendMessage: () => dispatch(sendMessage())
 })
 
-export default connect(
-  () => ({}),
-  mapDispatchToProps)(Contact)
+export default connect(mapStateToProps, mapDispatchToProps)(Contact)

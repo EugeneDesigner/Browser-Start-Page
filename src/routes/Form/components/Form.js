@@ -1,83 +1,73 @@
 import React, { Component } from 'react';
 import './Form.scss';
-import { reduxForm }  from 'redux-form';
-import _ from 'lodash';
+import { Field, reduxForm, submit }  from 'redux-form';
 
 
-const FIELDS ={
-  name: {
-    type: 'input'
-  },
-  email: {
-    type: 'input'
-  },
-  message: {
-    type: 'textarea'
+
+const validate = values => {
+  const errors = {}
+  if (!values.name) {
+    errors.name = 'Can I call you Secret Santa?'
+  } else if (values.name.length > 20) {
+    errors.username = 'Wow, maybe smth less than 20 characters?'
   }
 
+  if (!values.email) {
+    errors.email = 'Can I send back my answer back by a horse?'
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = 'Hm.. Maybe typo somewhere?'
+  }
+  if (!values.message) {
+    errors.message = 'I know, not easy to start conversation with stranger, but still...'
+  } else if (values.message.length > 300) {
+    errors.message = 'Would you mind keeping it ' + (values.message.length - 300) + 'signs shorter?'
+  } else if (values.message.length < 20) {
+    errors.message = 'I am so sad and lonely, maybe you can write ' + (20 - values.message.length) + ' letter(-s) more?'
+
+  }
+  return errors
 }
 
-console.log(FIELDS);
 
 
-class Form extends Component {
-  onSubmit(props) {
-    alert ('post submitted')
-  }
+const renderField = ({tag, input, placeholder, type, className, meta: {touched, error} }) => (
+  <div>
+    {
+      tag=="input" ?  <input {...input} placeholder={placeholder}  type={type} className={className}/> :
+      <textarea {...input} placeholder={placeholder} type={type} className={className}/>
+    }
+    {touched && ((error && <span className="ContactForm__error">{error}</span>))}
+  </div>
+)
 
 
 
-render() {
-  const { sendMessage, fields: { name, email, message }, handleSubmit } = this.props
+
+const Form = (props) => {
+  const {sendMessage, handleSubmit} = props
+
 
     return (
         <form
           className="ContactForm__form"
 
-          onSubmit={handleSubmit(sendMessage)}
-        >
-          <div>
-            <input
-              type="text"
-              placeholder="Name"
-              className="ContactForm__input"
-              {...name}
-            />
-          </div>
-          <div>
-            <input
-              type="email"
-              placeholder="Email"
-              className="ContactForm__input"
-              {...email}
-            />
-          </div>
-          <div>
-            <textarea
-              type="text"
-              placeholder="Write a short message"
-              className="ContactForm__input"
-              {...message}
-            />
-          </div>
+          onSubmit={handleSubmit(sendMessage)}>
 
-          <button
-            type="submit"
+       <Field name="name" type="text" tag="input" placeholder="Your name" component={renderField} className="ContactForm__input"/>
+       <Field name="email" type="email" tag="input" placeholder="Your email" component={renderField} className="ContactForm__input"/>
+       <Field name="message" type="text"  tag="textarea" placeholder="Short message" component={renderField} className="ContactForm__input"/>
 
-            className="ContactForm__button"
-          >
+       <button type="submit" className="ContactForm__button">
             Send
-          </button>
-        </form>
+      </button>
+      </form>
       )
 
-    }
-}
+  }
 
 
 
 export default reduxForm({
-  form: 'Form',
-  fields: _.keys(FIELDS),
-
+  form: 'contact',
+  validate
 })(Form);

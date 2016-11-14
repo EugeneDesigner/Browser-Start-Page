@@ -5,10 +5,11 @@ import * as actionTypes from '../constants/actionTypes'
 export function sendMessage() {
   return (dispatch, getState) => {
     const form = getState().form
+    console.log(form, form.contact.values.name)
     const person = {
-      name: form.person.name.value,
-      email: form.person.email.value,
-      message: form.person.message.value
+      name: form.contact.values.name,
+      email: form.contact.values.email,
+      message: form.contact.values.message
     };
     dispatch({
       type: actionTypes.SEND_MESSAGE,
