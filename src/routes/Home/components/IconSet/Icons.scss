@@ -1,20 +1,20 @@
 $colorList:
   "youtube" #ed4a4a,
   "facebook" #009eff,
-  "dribble" #e473ff,
+  "dribbble" #e473ff,
   "twitter" #5af9c4,
   "tumblr" #6464ff,
-  "pininterest" #ed4a4a,
+  "pinterest" #a50e50,
   "behance" #1780ce,
   "gmail" #ff247d,
   "instagram" #ff9331,
   "wikipedia" #878787,
   "medium" #42ea86,
   "linkedin" #0481a8,
-  "smashing" #fff,
-  "drive" #e473ff,
+  "smashingmagazine" #fff,
+  "drive" #55d1c6,
   "codepen" #ffe564,
-  "overflow" #873caa,
+  "stackoverflow" #873caa,
   "man" #0d6a99
 
 ;
@@ -34,7 +34,7 @@ $colorList:
   }
 
 
-  div {
+  a {
     flex: 1 0 20%;
     min-width: 300px;
     height: 300px;
@@ -63,7 +63,7 @@ $colorList:
     }
    }
 
-   div:hover {
+   a:hover {
      background-color: #000;
      margin: 15px;
 

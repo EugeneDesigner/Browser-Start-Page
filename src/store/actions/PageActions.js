@@ -18,7 +18,7 @@ export function uploadIcons(category) {
 
     for (let index in stock) {
       icons = icons.concat(stock[index]);
-      console.log(icons, stock[index]);
+      
     }
   } else {
       icons = stock[category]

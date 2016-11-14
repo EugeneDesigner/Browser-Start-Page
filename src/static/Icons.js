@@ -22,7 +22,7 @@ mergeStyles(...args) {
 
 renderIcon() {
   switch (this.props.icon) {
-    case 'facebook':
+    case 'facebook.com':
       return (
         <g>
         	<path fillRule="evenodd" clipRule="evenodd" fill="#FFFFFF" d="M178.91,89.313c5.669-0.189,11.332-0.046,17.018-0.05
@@ -33,7 +33,7 @@ renderIcon() {
         		C165.383,92.554,171.138,89.594,178.91,89.313z"/>
         </g>
       )
-    case 'youtube':
+    case 'youtube.com':
       return (
         <g>
               <path fillRule="evenodd" clipRule="evenodd" fill="#FFFFFF" d="M51.592,231.771c-9.346-3.068-15.646-9.204-19.021-18.483
@@ -43,7 +43,7 @@ renderIcon() {
       c-25.829-13.484-51.308-26.773-76.96-40.159C119.482,134.054,119.482,160.535,119.482,187.36z"/>
         </g>
       )
-    case 'behance':
+    case 'behance.net':
       return (
         <g>
         <g id="Слой_2">
@@ -77,7 +77,7 @@ renderIcon() {
 
         </g>
       )
-    case 'codepen':
+    case 'codepen.io':
       return (
         <g>
         	<g>
@@ -91,7 +91,7 @@ renderIcon() {
         	</g>
         </g>
       )
-    case 'dribble':
+    case 'dribbble.com':
       return (
         <g id="Слой_2">
         	<path fill="#FFFFFF" d="M149.999,64.038c-47.944,0-86.961,39.017-86.961,86.967c0,47.944,39.017,86.957,86.961,86.957
@@ -110,7 +110,7 @@ renderIcon() {
         		C217.694,181.955,206.466,199.059,190.654,209.991z"/>
         </g>
       )
-    case 'gmail':
+    case 'gmail.com':
       return (
         <g>
           <g>
@@ -121,7 +121,7 @@ renderIcon() {
           </g>
         </g>
       )
-    case 'drive':
+    case 'drive.google.com':
       return (
         <g>
       		<g>
@@ -135,7 +135,7 @@ renderIcon() {
       		</g>
       	</g>
       )
-    case 'instagram':
+    case 'instagram.com':
       return (
        <g >
       	<g id="XMLID_13_">
@@ -177,7 +177,7 @@ renderIcon() {
       	</g>
       </g>
       )
-    case 'linkedin':
+    case 'linkedin.com':
       return (
         <g id="Слой_2">
         	<path fill="#FFFFFF" d="M65.9,121.18h36.298v116.6H65.9V121.18z M84.061,63.22c11.595,0,21.015,9.419,21.015,21.003
@@ -187,7 +187,7 @@ renderIcon() {
         		c-18.873,0-21.75,14.719-21.75,29.927v57.689h-36.221V121.18z"/>
         </g>
       )
-    case 'medium':
+    case 'medium.com':
       return (
         <g>
           <path fill="#FFFFFF" d="M236.157,223.307l-55.437-27.231l-0.418-123.44c-0.01-2.882,2.935-4.78,5.476-3.532l52.557,25.824
@@ -200,7 +200,7 @@ renderIcon() {
             c0-2.209,2.258-3.66,4.207-2.702l56.013,27.521v124.525C120.719,222.797,118.388,224.295,116.376,223.307z"/>
         </g>
       )
-    case 'overflow':
+    case 'stackoverflow.com':
       return (
         <g>
       		<path fill="#FCFCFC" d="M183.121,165.362c3.876,0,7.697,0,11.508,0c0,23.533,0,47.056,0,70.594c-37.399,0-74.723,0-112.083,0
@@ -218,7 +218,7 @@ renderIcon() {
       			C172.337,189.506,172.774,184.736,173.225,179.918z"/>
       	</g>
       )
-    case 'pininterest':
+    case 'pinterest.com':
       return (
         <g>
         	<path fillRule="evenodd" clipRule="evenodd" fill="#FFFFFF" d="M139.771,175.779c-0.143,0.487-0.275,0.894-0.38,1.307
@@ -233,7 +233,7 @@ renderIcon() {
         		C141.548,178.169,140.749,176.986,139.771,175.779z"/>
         </g>
       )
-    case 'smashing':
+    case 'smashingmagazine.com':
       return (
         <g>
       		<g>
@@ -251,7 +251,7 @@ renderIcon() {
       		</g>
       	</g>
       )
-    case 'tumblr':
+    case 'tumblr.com':
       return (
         <g>
         	<path fillRule="evenodd" clipRule="evenodd" fill="#FFFFFF" d="M203.662,200.865c0-0.044-0.011-0.093-0.039-0.126
@@ -262,7 +262,7 @@ renderIcon() {
         		c7.974-2.007,17.207-6.038,18.945-7.111C203.7,226.657,203.7,229.858,203.662,200.865z"/>
         </g>
       )
-    case 'twitter':
+    case 'twitter.com':
       return (
         <g>
         	<path fillRule="evenodd" clipRule="evenodd" fill="#FFFFFF" d="M110.697,196.431c-21.329-0.745-34.662-16.049-38.191-28.484
@@ -279,7 +279,7 @@ renderIcon() {
         		C98.14,204.959,104.587,201.217,110.697,196.431z"/>
         </g>
       )
-    case 'wikipedia':
+    case 'wikipedia.org':
       return (
         <g>
           		<g>

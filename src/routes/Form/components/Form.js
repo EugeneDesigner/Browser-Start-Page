@@ -13,7 +13,7 @@ const validate = values => {
   }
 
   if (!values.email) {
-    errors.email = 'Can I send back my answer back by a horse?'
+    errors.email = 'Can I send back my answer by a horse?'
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = 'Hm.. Maybe typo somewhere?'
   }
